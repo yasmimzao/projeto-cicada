@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body id="body">
+    <div class="menu">
+        <div class="logo">
+            <img src="/Imagens/Logos/CicadaLogoClara.png" alt="Cicada-Logo" class="imglight">
+            <a href="/HTML/Cicada 3301.html" class="linkdark">voltar</a>
+            <img src="/Imagens/Logos/CicadaLogoEscura.png" alt="Cicada-Logo" class="imgdark">
+            <a href="/HTML/Cicada 3301.html" class="linklight">voltar</a>
+            <input type="checkbox" id="chk">
+            <img src="/Imagens/Outros/Lua Branca.png" alt="Tema Claro" class="iconmoon">
+            <img src="/Imagens/Outros/Sol.png" alt="Tema Escuro" class="iconsun">
+        </div>
+        <div class="títulodiv">
+            <div class="tdiv2">
+                <h2 id="título"">Formulário</h2></div>
+        </div>
+        <div class="buttons">
+            <div class="imitabotao">
+                <a href="/HTML/Cicada 3301.html" id="voltar">Voltar</a></div>
+        </div>
+    </div>
+    <div class="formarea">
+        <div class="form text">
+            <p>Este site é uma colaboração entre os membros do "Cicada Solvers", um grupo que procura colaborar entre si para desvendar o restante mistério do 3301. 
+                Dessa maneira, tentamos divulgar o enigma, visando recrutar novos membros que contríbuam à nossa árdua investigação.</p>
+            <p>Caso deseje se juntar a nós, entre em contato conosco, preenchendo as informações abaixo:</p>
+        </div>
+        <div class="realform">
+            <form action="#">
+                <fieldset>
+                    <div class="input group">
+                    <div class="nome">
+                        <label for="nome">Nome:</label>
+                        <input type=text id="nome" placeholder="Digite aqui seu primeiro nome." name="nome" required>
+                    </div>
+                    <div class="nome">
+                        <label for="sobnome:">Sobrenome:</label>
+                        <input type=text id="sobnome" placeholder="Digite aqui seu sobrenome." name="sobnome">
+                    </div>
+                    <div>
+                        <label for="idade">Idade:</label>
+                        <input type="number" id="idade" name="idade" min="16" max="116" required> anos.
+                    </div>
+                    <div>
+                        <label for="data">Sua data de nascimento:</label>
+                        <input type="date" id="data" name="data">
+                    </div>
+                    <div id="email">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" placeholder="MMMCCCI@gmail.com" name="email" required>
+                    </div>
+                    <div>
+                        Deseja entrar em contato com membros internacionais?
+                    </div>
+                    <div class="escolhaSN">
+                        <div><input type="radio" id="opsim" name="idioma">
+                        <label for="opsim">Sim</label></div>
+                        <div><input type="radio" id="opnao" name="idioma">
+                        <label for="opnao">Não</label></div>
+                    </div>
+                    <div id="conheceu">
+                        <label for="conhecipor">Você conheceu os enigmas da Cicada por meio de:</label>
+                        <select name="conhecipor" id="conhecipor">
+                            <option label="Nosso site" id="site"></option>
+                            <option label="Vídeos do YouTube" id="yt"></option>
+                            <option label="Fóruns online (como 4chan ou Reddit)" id="forum"></option>
+                            <option label="Conhecidos que me contaram sobre" id="amigo"></option>
+                            <option label="Matérias de reportagem" id="jornal"></option>
+                            <option label="Redes sociais" id="social"></option>
+                        </select>
+                    </div>
+                    <div id="conhecimento">
+                        <div>
+                        Eu tenho conhecimento nas seguintes áreas:
+                        </div>
+                        <div>
+                            <input type="checkbox" id="cript" name="cript">
+                            <label for="cript">Criptografia</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="info" name="info">
+                            <label for="info">Informática</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="rede" name="rede">
+                            <label for="rede">Redes</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="prgrm" name="prgrm">
+                            <label for="prgrm">Programação</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="compt" name="compt">
+                            <label for="compt">Computação</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="mat" name="mat">
+                            <label for="mat">Matemática Avançada</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="lit" name="lit">
+                            <label for="lit">Literatura</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="filo" name="filo">
+                            <label for="filo">Filosofia</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="outra" name="outra">
+                            <label for="outra">Outra:</label>
+                            <textarea id="outratext" name="outratext"></textarea>
+                        </div>
+                    </div>
+                    <div>
+                        Diretrizes da Comunidade
+                    </div>
+                    <div>
+                        <p>○ Respeitarei os outros membros da comunidade, independente de sua nacionalidade, etnia, ideologias políticas, etc.</p>
+                        <p>○ Manterei postura civilizada em nossos espaços de discussões, jamais causando problemas.</p>
+                        <p>○ Irei contribuir com minhas habilidades no que for preciso e ajudarei no que for solicitado.</p>
+                        <p>○ Compartilharei minhas pesquisas, jamais escondendo meu progresso, caso obtiver.</p>   
+                    </div>
+                    <div class="diretrizesdiv">
+                        <div><input type="radio" id="nleu" name="diretrizes">
+                        <label for="nleu">Discordo</label></div>
+                        <div><input type="radio" id="li" name="diretrizes">
+                        <label for="li">Li, concordo e seguirei as diretrizes.</label></div>
+                    </div>
+        
+                    <div class="botõesforms">
+                        <button type="submit" id="enviar">Enviar</button>
+                        <button type="reset" id="limpar">Limpar</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<link href="/CSS/Cicada 3301 - Formulário.css" rel="stylesheet" type="text/css">
+<script src="/JavaScript/Cicada 3301 - Formulário.js" type="text/javascript"></script>

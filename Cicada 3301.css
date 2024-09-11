@@ -1,0 +1,514 @@
+@font-face{
+    font-family: CovesBold;
+    src: url(/Fontes/Coves\ Bold.otf)
+}
+@font-face{
+    font-family: CovesLight;
+    src: url(/Fontes/Coves\ Light.otf)
+}
+@font-face{
+    font-family: Agus-Sans;
+    src: url(/Fontes/Agus\ Sans\ Regular\ 400.otf)
+}
+@font-face{
+    font-family: Cinzel;
+    src: url(/Fontes/Cinzel-Bold.otf)
+}
+@font-face{
+    font-family: Fragmentcore;
+    src: url(/Fontes/Fragmentcore.otf);
+}
+@font-face{
+    font-family: FuturaL;
+    src: url(/Fontes/Futura\ Light.otf);
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+#body{
+    background-color: #191919;
+    color: #ffffff;
+    font-family: Fragmentcore;
+    line-height: 27px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+}
+
+/*Menu*/
+
+.menu{
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: flex;
+    padding-top: 12px;
+    padding-bottom: 20px;
+    width: 100%;
+    position: absolute;
+    background-color: #000000;
+    transition: 0.5s;
+}
+.buttons{
+    justify-content: end;
+    display: flex;
+    margin-right: 15px;
+    transition: 0.5s;
+}
+.imitabotao{
+    display: flex;
+    cursor: pointer;
+    font-family: CovesBold;
+    margin-bottom: 15px;
+    transition: 0.5s;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.imglight, .imgdark{
+    cursor: pointer;
+}
+.imglight{
+    width: 100px;
+    margin-left: 20px;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+.imgdark{
+    width: 100px;
+    margin-left: 20px;
+    margin-top: 10px;
+    display: none;
+    transition: 0.5s;
+}
+.iconmoon{
+    margin-left: 10px;
+    width: 26px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.iconsun{
+    margin-left: 10px;
+    width: 26px;
+    cursor: pointer;
+    display: none;
+    transition: 0.5s;
+}
+
+/*Botões*/
+
+#btthome,
+#bttenig,
+#bttmist,
+#bttobje,
+#bttjoin{
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background: none;
+    border: none;
+    font-size: large;
+    cursor: pointer;
+    transition: 0.5s;
+    border-bottom: 2px solid transparent;
+    color: #ffffff;
+    font-family: CovesBold;
+}
+#btthome:hover,
+#bttenig:hover,
+#bttmist:hover,
+#bttobje:hover,
+#bttjoin:hover{
+    padding-top: 15px;
+    animation: piscar1 0.5s infinite alternate-reverse;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+@keyframes piscar1{
+    from {
+        color: #ffffff;
+        border-bottom: 2px solid #ffffff;
+    }
+    to {
+        color: #a5a5a5;
+        border-bottom: 2px solid #a5a5a5;
+    }
+}
+@keyframes piscar2{
+    from {
+        color: #000000;
+        border-bottom: 2px solid #000000;
+    }
+    to {
+        color: #a5a5a5;
+        border-bottom: 2px solid #a5a5a5;
+    }
+}
+
+/*Tema Claro*/
+
+#body.claro{
+    transition: 0.5s;
+    background-color: #dcdcdc;
+    .menu{
+        background-color: #ffffff;
+        transition: 0.5s;
+    }
+    #btthome,
+    #bttenig,
+    #bttmist,
+    #bttobje,
+    #bttjoin{
+        color: #000000;
+        transition: 0.5s;
+    }
+    #btthome:hover,
+    #bttenig:hover,
+    #bttmist:hover,
+    #bttobje:hover,
+    #bttjoin:hover{
+        animation: piscar2 0.5s infinite alternate-reverse;
+    }
+    .imgdark{
+        display: flex;
+        transition: 0.5s;
+    }
+    .imglight{
+        display: none;
+        transition: 0.5s;
+    }
+    .home,
+    .enig,
+    .mist,
+    .obje,
+    .join{
+        color: #000000;
+        background-color: #c2c2c2;
+        transition: 0.5s;
+    }
+    .iconmoon{
+        display: none;
+    }
+    .iconsun{
+        display: flex;
+    }
+}
+#chk{
+    opacity: 0;
+    margin-right: -43px;
+    padding: 0px;
+    border: 0px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+/*Conteúdo*/
+
+.home,
+.enig,
+.mist,
+.obje,
+.join{
+    margin-top: 120px;
+    margin-bottom: 200px;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: #00000064;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+    font-weight: 200;
+    transition: 0.5s;
+}
+
+
+/*Subconteúdo: Imagem 1*/
+
+.IMG1{
+    display: flex;
+}
+#tradução1{
+    margin-left: 5%;
+    margin-right: 5%;
+    font-style: italic;
+    font-family: FuturaL;
+}
+#tradução1 p{
+    line-height: 23px;
+}
+#IMG1{
+    margin-left: 5%;
+    height: 340px;
+    width: 350px;
+}
+
+@media (max-width: 1200px){
+    .IMG1{
+        display: block;
+        margin-bottom: 50px;
+    }
+    #tradução1{
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    #IMG1{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/*Subconteúdo: Imagem 2*/
+
+.IMG2{
+    display: flex;
+}
+#tradução2{
+    font-family: FuturaL;
+    font-style: italic;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#tradução2 p{
+    line-height: 23px;
+}
+#IMG2{
+    margin-left: 5%;
+    height: 340px;
+    width: 350px;
+}
+
+@media (max-width: 1000px){
+    .IMG2{
+        display: block;
+        margin-bottom: 50px;
+    }
+    #tradução2{
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    #IMG2{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/*Subconteúdo: Imagem 3*/
+
+.IMG3{
+    display: flex;
+}
+#localização{
+    font-family: FuturaL;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+}
+#localização p h2{
+    line-height: 23px;
+}
+#IMG3{
+    margin-left: 5%;
+    height: 340px;
+    width: 350px;
+}
+
+@media (max-width: 800px){
+    .IMG3{
+        display: block;
+        margin-bottom: 50px;
+    }
+    #localização{
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    #IMG3{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/*Subconteúdo: Imagem 4*/
+
+.IMG4{
+    display: flex;
+}
+#tradução3{
+    margin-left: 5%;
+    margin-right: 5%;
+    font-style: italic;
+    font-family: FuturaL;
+}
+#tradução3 p{
+    font-size: smaller;
+    line-height: 21px;
+}
+#IMG4{
+    margin-left: 5%;
+    height: 500px;
+    width: 350px;
+}
+
+@media (max-width: 1200px){
+    .IMG4{
+        display: block;
+        margin-bottom: 50px;
+    }
+    #tradução3{
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    #IMG4{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 340px;
+        width: 350px;
+    }
+}
+
+/*Subconteúdo: Imagem 5*/
+
+.IMG5{
+    display: flex;
+}
+#legenda{
+    margin-left: 5%;
+    margin-right: 5%;
+    font-style: italic;
+    font-family: FuturaL;
+    text-align: center;
+}
+#legenda p{
+    font-size: x-large;
+    line-height: 23px;
+}
+#IMG5{
+    margin-left: 5%;
+    width: 350px;
+}
+
+/*Subconteúdo: Imagem 6*/
+
+.IMG6{
+    display: flex;
+}
+#tradução4{
+    margin-left: 5%;
+    margin-right: 5%;
+    font-style: italic;
+    font-family: FuturaL;
+}
+#tradução4 p{
+    line-height: 21px;
+}
+#IMG6{
+    margin-left: 5%;
+    height: 500px;
+    width: 350px;
+}
+
+@media (max-width: 1220px){
+    .IMG6{
+        display: block;
+        margin-bottom: 50px;
+    }
+    #tradução4{
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    #IMG6{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 340px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 1070px){
+    .IMG5{
+        display: block;
+        margin-bottom: 50px;
+    }
+    #legenda{
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    #IMG5{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/*Link para o Formulário*/
+
+.forms{
+    font-weight: 200;
+    transition: 0.5s;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+#sim, #não{
+    font-family: FuturaL;
+    text-decoration: none;
+    color: #f5f5f5;
+    border-radius: 30px;
+    padding: 10px;
+    transition: 0.3s;
+}
+#sim{
+    background-color: #587b35;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 7%;
+}
+#não{
+    background-color: #7b3535;
+    padding-left: 17px;
+    padding-right: 17px;
+    margin-left: 7%;
+    cursor: pointer;
+}
+#sim:hover{
+    background-color: #6db02a;
+}
+#não:hover{
+    background-color: #b02a2a;
+}
+
+/*Outros*/
+
+@media (max-width: 580px){
+    .home,
+    .enig,
+    .mist,
+    .obje,
+    .join{
+        margin-top: 180px;
+    }
+}
+
+p{
+    padding: 3px;
+    border-radius: 5px;
+}
+h1{
+    text-align: center;
+}
